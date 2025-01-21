@@ -62,6 +62,16 @@ main {
     text-align: center;
 }
 
+.card ul li a {
+    text-decoration: none;
+    color: #111a9c;
+    font-weight: bold;
+}
+
+.card ul li a:hover {
+    color: #494d83;
+}
+
 .card img {
     width: 100%;
     height: auto;
