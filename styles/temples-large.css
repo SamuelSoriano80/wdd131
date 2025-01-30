@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+    .temples-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    .temples-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+}
+
+button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 2rem;
+        left: 70%;
+    }
+
+    nav ul{
+        display: none
+    }
+
+    nav ul.active {
+        display: block;
+    }
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
