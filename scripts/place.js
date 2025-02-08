@@ -1,17 +1,11 @@
-// JavaScript for place.html
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Set current year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Set last modified date in the footer
     document.getElementById("lastModified").textContent = document.lastModified;
 
-    // Static temperature and wind speed values
-    const temperature = 10; // Celsius
-    const windSpeed = 5; // km/h
+    const temperature = 10;
+    const windSpeed = 5;
 
-    // Function to calculate wind chill
     function calculateWindChill(temp, wind) {
         if (temp <= 10 && wind > 4.8) {
             return (
@@ -22,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Display wind chill factor
     document.getElementById("windchill").textContent = calculateWindChill(temperature, windSpeed) + " °C";
     document.getElementById("wind").textContent = windSpeed;
     document.getElementById("temperature").textContent = temperature;
