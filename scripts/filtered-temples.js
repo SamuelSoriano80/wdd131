@@ -87,7 +87,7 @@ const temples = [
 const container = document.getElementById("temples-container");
 
 function displayTemples(filterFn = () => true) {
-    container.innerHTML = "";
+    container.innerHTML = `<h2>Temples list:</h2>`;
     temples.filter(filterFn).forEach(temple => {
         const card = document.createElement("div");
         card.classList.add("temple-card");
