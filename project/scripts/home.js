@@ -11,3 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
         menuToggle.textContent = sidebar.classList.contains('active') ? '✖' : '☰';
     });
 });
+
+function updateCounter() {
+    let reviewCount = localStorage.getItem('reviewCount') || 0;
+  
+    reviewCount++;
+  
+    localStorage.setItem('reviewCount', reviewCount);
+  
+    const counterElement = document.getElementById('reviewCounter');
+    counterElement.textContent = `You have visited this page: ${reviewCount}`;
+}
+
+document.addEventListener('DOMContentLoaded', updateCounter);
